@@ -13,6 +13,10 @@
  * require_tree .
  *
  *= require _bootstrap_import
+ *= require backgrounds
+ *= require icons
+ *= require navigation
+ *= require spaces
  *= require custom
  *= require_self
  */

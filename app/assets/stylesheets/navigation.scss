@@ -1,0 +1,14 @@
+header { color: #FFF; text-align: center; padding: 300px 0 30px; }
+.navigator { position: relative; background-color: rgba(0, 0, 0, 0.7); padding: 30px 0; }
+.navigator ul { margin-bottom: 0; }
+.brand img { width: 150px; height: auto; }
+.brand { padding-bottom: 30px; }
+.navigation { text-transform: uppercase; padding-bottom: 30px; }
+.navigation ul>li { margin-right: 30px; }
+.navigation ul>li:last-child { margin-right: 0; }
+.icon-navigation { font-size: 18px; }
+.icon-navigation ul>li { margin-right: 20px; }
+.icon-navigation ul>li:last-child { margin-right: 0; }
+.header-bottom { padding-top: 20px; }
+.nav-submenu { display: none; position: absolute; width: 100%; top: 100%; margin-top: 10px; }
+.nav-submenu ul { background-color: #000; width: 510px; margin: 0 auto; text-transform: uppercase; -moz-column-count: 4; -moz-column-gap: 10px; -webkit-column-count: 4; -webkit-column-gap: 10px; column-count: 4; column-gap: 10px; margin-bottom: 0; text-align: left; padding: 12px 35px; }

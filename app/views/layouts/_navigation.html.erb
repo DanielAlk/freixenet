@@ -1,0 +1,67 @@
+<header class="<%= navigation_background %>">
+	<div class="navigator">
+		<div class="brand"><%= image_tag 'logo-freixenet.png' %></div>
+		<div class="navigation">
+			<nav role="navigation">
+				<ul class="list-inline">
+					<li><%= link_to 'Home', root_path, class: navigation_class('home') %></li>
+					<li><%= link_to 'Historia y Filosofía', root_path %></li>
+					<li><%= link_to 'Producto', root_path %></li>
+					<li><%= link_to 'Novedades', root_path %></li>
+					<li><%= link_to 'Contacto', root_path %></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="icon-navigation">
+			<nav role="navigation">
+				<ul class="list-inline">
+					<li>
+						<%= link_to '' do %>
+							<i class="icon icon-facebook"></i>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to '#', data: { toggle: '#submenu-world' } do %>
+							<i class="icon icon-world"></i>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to '' do %>
+							<i class="icon icon-media"></i>
+						<% end %>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="nav-submenu" id="submenu-world">
+			<ul class="list-unstyled">
+				<li><%= link_to 'argentina', '' %></li>
+				<li><%= link_to 'australia', '' %></li>
+				<li><%= link_to 'austria', '' %></li>
+				<li><%= link_to 'belgium', '' %></li>
+				<li><%= link_to 'canada', '' %></li>
+				<li><%= link_to 'china', '' %></li>
+				<li><%= link_to 'denmark', '' %></li>
+				<li><%= link_to 'estonia', '' %></li>
+				<li><%= link_to 'france', '' %></li>
+				<li><%= link_to 'germany', '' %></li>
+				<li><%= link_to 'latvia', '' %></li>
+				<li><%= link_to 'japan', '' %></li>
+				<li><%= link_to 'lithuania', '' %></li>
+				<li><%= link_to 'mexico', '' %></li>
+				<li><%= link_to 'netherlands', '' %></li>
+				<li><%= link_to 'poland', '' %></li>
+				<li><%= link_to 'russia', '' %></li>
+				<li><%= link_to 'spain', '' %></li>
+				<li><%= link_to 'sweden', '' %></li>
+				<li><%= link_to 'switzerland', '' %></li>
+				<li><%= link_to 'united kingdom', '' %></li>
+				<li><%= link_to 'united states', '' %></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<h3 class="text-uppercase">Bienvenidos</h3>
+		<p>A nuestro mundo de CELEBRACIÓN, el Mundo de FREIXENET.</p>
+	</div>
+</header>

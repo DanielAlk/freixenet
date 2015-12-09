@@ -1,3 +1,19 @@
 body { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
 .roboto { font-family: 'Roboto Condensed', sans-serif; font-weight: 300; }
-.oswald { font-family: 'Oswald', sans-serif; }
+.oswald { font-family: 'Oswald', sans-serif; font-weight: 300; }
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 { font-family: 'Oswald', sans-serif; font-weight: 300; }
+
+h2,.h2 { font-size: 46px; }
+
+em { color: #e0cd75; font-size: 1.2em; }
+
+a { color: inherit; font-family: 'Oswald', sans-serif; font-weight: 300; }
+a:focus { outline: 0; }
+a:hover, a:focus, a:active, a.active { color: #e0cd75; text-decoration: none; }
+
+img.cover { width: 100%; height: auto; }
+
+section.content { padding-top: 50px; padding-bottom: 50px; }
+
+.container.narrow { max-width: 900px; }
