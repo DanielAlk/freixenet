@@ -16,9 +16,9 @@ Forms.contact = function() {
 	var $form = $('#contactForm');
 	var $success = $($form.data('success'));
 	$form.validate({
-		submitHandler: function() {
-			$form.fadeOut();
-			$success.fadeIn();
+		submitHandler: function(form) {
+			form.reset();
+			$success.modal('show');
 		}
 	});
 };

@@ -6,7 +6,7 @@
 	<div class="container">
 		<h1 class="text-uppercase text-center">Contactanos</h1>
 		<p class="text-center space-xs-S-40">Enterate de todo, recibi informacion exclusiva sobre promociones, lanzamientos y mas.</p>
-		<form class="contact-form" role="form" id="contactForm" data-success=".contact-form.success-message">
+		<form class="contact-form" role="form" id="contactForm" data-success="#contactSuccessMessage">
 			<div class="form-group">
 				<%= text_field_tag 'contact[fullname]', nil, class: 'form-control', placeholder: 'Nombre y apellidos *', required: true %>
 			</div>
@@ -58,8 +58,21 @@
 			</div>
 			<%= submit_tag 'Enviar', class: 'btn btn-default space-xs-N-20' %>
 		</form>
-		<div class="contact-form success-message">
-			<h3 class="text-center">¡Gracias por contactarte!</h3>
-		</div>
 	</div>
 </section>
+<div class="modal modal-success fade" tabindex="-1" role="dialog" id="contactSuccessMessage">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Freixenet</h3>
+      </div>
+      <div class="modal-body">
+        <p>¡Gracias por contactarte!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
