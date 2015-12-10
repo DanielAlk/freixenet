@@ -11,6 +11,7 @@ Slider.plugin = function(delay) {
 		var $prev = $slider.find('.slider-prev');
 		var $next = $slider.find('.slider-next');
 		var $items = $slider.find('.slider-item');
+		var $toggleMode = $slider.find('[data-mode]');
 		var timer;
 		var start = function() {
 			timer = setInterval(next, delay);
@@ -41,8 +42,20 @@ Slider.plugin = function(delay) {
 			var $prev = $active.is($items.first()) ? $items.last() : $active.prev();
 			toggle($active, $prev, 'left');
 		};
+		var toggleMode = function(e) {
+			e.preventDefault();
+			var mode = $(this).data('mode');
+			if ($slider.hasClass(mode)) {
+				$slider.removeClass(mode);
+				start();
+			} else {
+				clearInterval(timer);
+				$slider.addClass(mode);
+			};
+		};
 		$next.click(next);
 		$prev.click(prev);
+		$toggleMode.click(toggleMode);
 		start();
 	});
 };
