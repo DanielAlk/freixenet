@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
   get 'news' => 'static_pages#news', as: :news
+  get 'media' => 'static_pages#media', as: :media
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

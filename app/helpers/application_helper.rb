@@ -21,6 +21,8 @@ module ApplicationHelper
 			'bg-beach-party'
 		when 'news'
 			'bg-cake-couple'
+		when 'media'
+			'bg-dancing-couple'
 		else
 			'bg-beach-party'
 		end

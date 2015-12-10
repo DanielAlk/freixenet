@@ -14,6 +14,7 @@ Utils.toggler = function() {
 	var handler = function(e) {
 		e.preventDefault();
 		var $target = $($(this).data('toggle'));
+		$(this).toggleClass('active');
 		toggle($target);
 	};
 	$('[data-toggle]').click(handler);
