@@ -1,0 +1,16 @@
+.card {position:relative;text-align: left;font-size: .9em;height: 490px;}
+.card-button {position: absolute;bottom: 0;}
+.card-title {display: block;}
+
+@media(max-width: 1199px) {
+	.card { height: 470px; }
+}
+
+@media(max-width: 991px) {
+	.card { height: 590px; margin-bottom: 20px; }
+}
+
+@media(max-width: 767px) {
+	.card { height: auto;}
+	.card-button { position: static; }
+}

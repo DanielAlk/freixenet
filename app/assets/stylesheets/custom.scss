@@ -7,6 +7,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 { font-family: 'Oswald', sans-serif; f
 h2,.h2 { font-size: 46px; }
 
 em { color: #e0cd75; font-size: 1.2em; }
+mark, .mark {background-color: #f0db7a;padding: 0 .3em;}
 
 a { color: inherit; font-family: 'Oswald', sans-serif; font-weight: 300; }
 a:focus { outline: 0; }
@@ -15,5 +16,9 @@ a:hover, a:focus, a:active, a.active { color: #e0cd75; text-decoration: none; }
 img.cover { width: 100%; height: auto; }
 
 section.content { padding-top: 50px; padding-bottom: 50px; }
+section.content.beige { background-color: #ecebe6; }
+section.content.scroll-x {overflow-x: scroll; overflow-y:visible;}
 
 .container.narrow { max-width: 900px; }
+
+.caret { border-top-width: 6px; border-left-width: 3px; border-right-width: 3px; }

@@ -6,6 +6,7 @@
 		<p class="text-left">La vida es para disfrutarla, ¿no crees? Eso pensamos nosotros, tal vez porque vivimos en un lugar precioso, el Penedès, justo al suroeste de la vibrante Barcelona. Y qué mejor manera para disfrutar que con nuestro cava. No existe mejor augurio que ese sonido del tapón mientras descorchamos una botella. O ese cosquilleo tras el primer sorbo. Cualquier momento es algo más divertido y memorable cuando se celebra con nuestras chispeantes burbujas. Aprovecha tu oportunidad y disfruta de cada momento.<br><em>Celebra la vida.</em></p>
 	</div>
 </section>
+<%= render 'shared/timeline' %>
 <section class="content">
 	<div class="container narrow">
 		<h4 class="text-uppercase">Origen</h4>
@@ -18,5 +19,16 @@
 				<p>La naturaleza nos regala un suelo fértil y muchas horas de sol en un paisaje visiblemente ondulante.De este magnífico entorno surge nuestro espumoso: el cava. Se trata de una Denominación de Origen protegida, en la que sólo se pueden emplear determinadas variedades de uva y seguir el llamado “método tradicional”, mediante el cual el vino pasa por una segunda fermentación en botella. Todo ello tiene lugar en nuestra bodega, en la región vinícola de Sant Sadurní d’Anoia, donde cada año llegan nuestras uvas y las de 2.000 socios productores.</p>
 			</div>
 		</div>
+	</div>
+</section>
+<%= render 'shared/news' %>
+<section class="content bg-bottle-in-a-purse text-center">
+	<div class="container">
+		<h2 class="text-uppercase">Contactanos</h2>
+		<p>Suscribite gratis y mantenete en contacto.</p>
+		<hr class="space-xs-N-40 center-max-250">
+		<p class="center-max-290">Enterate de todo, recibi informacion exclusiva sobre promociones, lanzamientos y mas.</p>
+		<hr class="space-xs-S-40 center-max-250">
+		<%= link_to 'Contacto', nil, class: 'btn btn-info' %>
 	</div>
 </section>

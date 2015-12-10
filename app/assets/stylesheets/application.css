@@ -14,8 +14,12 @@
  *
  *= require _bootstrap_import
  *= require backgrounds
+ *= require buttons
  *= require icons
  *= require navigation
+ *= require footer
+ *= require card
+ *= require timeline
  *= require spaces
  *= require custom
  *= require_self
