@@ -5,4 +5,6 @@ class StaticPagesController < ApplicationController
   end
   def media
   end
+  def contact
+  end
 end

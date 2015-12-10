@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'news' => 'static_pages#news', as: :news
   get 'media' => 'static_pages#media', as: :media
+  get 'contact' => 'static_pages#contact', as: :contact
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

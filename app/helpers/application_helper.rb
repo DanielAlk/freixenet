@@ -23,6 +23,8 @@ module ApplicationHelper
 			'bg-cake-couple'
 		when 'media'
 			'bg-dancing-couple'
+		when 'contact'
+			'bg-traffic-couple'
 		else
 			'bg-beach-party'
 		end

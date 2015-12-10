@@ -15,6 +15,7 @@
  *= require _bootstrap_import
  *= require backgrounds
  *= require buttons
+ *= require forms
  *= require icons
  *= require navigation
  *= require footer
@@ -23,6 +24,7 @@
  *= require timeline
  *= require slider
  *= require products
+ *= require contact
  *= require news
  *= require spaces
  *= require custom
