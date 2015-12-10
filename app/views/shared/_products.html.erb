@@ -1,0 +1,71 @@
+<% content_for :extra_js do %>
+	$('#productsSlider').slider();
+<% end %>
+
+<section class="products">
+	<div class="slider" id="productsSlider">
+		<div class="slider-controls">
+			<%= link_to '#', class: 'slider-prev' do %>
+				<i class="icon icon-chevron-left"></i>
+			<% end %>
+			<%= link_to '#', class: 'slider-next' do %>
+				<i class="icon icon-chevron-right"></i>
+			<% end %>
+		</div>
+		<div class="slider-item active">
+			<div class="slider-content" style="background-image: url(<%= asset_path 'products-1.jpg' %>)">
+				<div class="container">
+					<div class="slider-caption">
+						<h2 class="text-uppercase">Freixenet CORDÓN NEGRO</h2>
+						<p class="space-xs-S-40">Este es el cava favorito en el mundo y es famoso por su hermosa y atractiva botella negra. Su aroma fresco, nítido y afrutado va con todo y, como por arte de magia, da a cada momento ese punto más especial.</p>
+						<%= link_to 'Más info', nil, class: 'btn btn-info' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="slider-content" style="background-image: url(<%= asset_path 'products-2.jpg' %>)">
+				<div class="container">
+					<div class="slider-caption">
+						<h2 class="text-uppercase">Freixenet Elyssia Pinot Noir</h2>
+						<p class="space-xs-S-40">Este galardonado espumoso vino rosado tiene un sabor espléndido y un hermoso aspecto: nuestra interpretación moderna en el arte de hacer cava.</p>
+						<%= link_to 'Más info', nil, class: 'btn btn-info' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="slider-content" style="background-image: url(<%= asset_path 'products-3.jpg' %>)">
+				<div class="container">
+					<div class="slider-caption">
+						<h2 class="text-uppercase">Freixenet Elyssia Gran Cuvée</h2>
+						<p class="space-xs-S-40">Este galardonado espumoso vino rosado tiene un sabor espléndido y un hermoso aspecto: nuestra interpretación moderna en el arte de hacer cava.</p>
+						<%= link_to 'Más info', nil, class: 'btn btn-info' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="slider-content" style="background-image: url(<%= asset_path 'products-4.jpg' %>)">
+				<div class="container">
+					<div class="slider-caption">
+						<h2 class="text-uppercase">Freixenet Carta Nevada</h2>
+						<p class="space-xs-S-40">Esta dorada botella esmerilada está hecha a medida para las celebraciones. Un cava clásico, la perfecta introducción a una de las regiones productoras de espumosos más famosas del mundo.</p>
+						<%= link_to 'Más info', nil, class: 'btn btn-info' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-item">
+			<div class="slider-content" style="background-image: url(<%= asset_path 'products-5.jpg' %>)">
+				<div class="container">
+					<div class="slider-caption">
+						<h2 class="text-uppercase">Freixenet cordón rosado</h2>
+						<p class="space-xs-S-40">El Rosado o Rosé es el cava para los que prefieren un espumoso suave, delicado y… ¡rosa!</p>
+						<%= link_to 'Más info', nil, class: 'btn btn-info' %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,10 @@
+.slider { position: relative; min-height: 600px; }
+.slider-controls { position: absolute; width: 100%; z-index: 1; font-size: 40px; top: 50%; margin-top: -20px; padding: 0 10px; line-height: 1em; }
+.slider-prev {float: left;}
+.slider-next {float: right;}
+.slider-prev, .slider-next {}
+.slider-next:hover, .slider-prev:hover {background-color: rgba(0,0,0,0.2);}
+.slider-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #FFF; }
+.slider-content { position: relative; height: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+.slider-caption { margin-top: 200px; max-width: 50%;}
+.slider-item:not(.active) .slider-content {display: none;}

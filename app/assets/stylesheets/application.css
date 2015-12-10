@@ -20,6 +20,7 @@
  *= require footer
  *= require card
  *= require timeline
+ *= require slider
  *= require spaces
  *= require custom
  *= require_self
