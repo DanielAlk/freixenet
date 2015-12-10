@@ -12,13 +12,10 @@ Slider.plugin = function(delay) {
 		var $next = $slider.find('.slider-next');
 		var $items = $slider.find('.slider-item');
 		var $toggleMode = $slider.find('[data-mode]');
-		var timer;
+		var timer, active_mode = false;
 		var start = function() {
-			timer = setInterval(next, delay);
-		};
-		var restart = function() {
 			clearInterval(timer);
-			start();
+			timer = setInterval(next, delay);
 		};
 		var toggle = function($active, $target, direction) {
 			var d = Number(direction=='left');
@@ -30,14 +27,14 @@ Slider.plugin = function(delay) {
 		};
 		var next = function(e) {
 			!!e && e.preventDefault();
-			!!e && restart();
+			!!e && !active_mode && start();
 			var $active = $items.filter('.active');
 			var $next = $active.is($items.last()) ? $items.first() : $active.next();
 			toggle($active, $next, 'right');
 		};
 		var prev = function(e) {
 			!!e && e.preventDefault();
-			!!e && restart();
+			!!e && !active_mode && start();
 			var $active = $items.filter('.active');
 			var $prev = $active.is($items.first()) ? $items.last() : $active.prev();
 			toggle($active, $prev, 'left');
@@ -47,9 +44,11 @@ Slider.plugin = function(delay) {
 			var mode = $(this).data('mode');
 			if ($slider.hasClass(mode)) {
 				$slider.removeClass(mode);
+				active_mode = false;
 				start();
 			} else {
 				clearInterval(timer);
+				active_mode = mode;
 				$slider.addClass(mode);
 			};
 		};
