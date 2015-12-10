@@ -1,8 +1,8 @@
 <nav role="navigation">
 	<ul class="list-inline">
 		<li><%= link_to 'Home', root_path, class: navigation_class('home') %></li>
-		<li><%= link_to 'Historia y Filosofía', history_path, class: navigation_class('history') %></li>
-		<li><%= link_to 'Producto', products_path, class: navigation_class('products') %></li>
+		<li><%= link_to 'Historia y Filosofía', root_path, data: { scroll: '#timeline' } %></li>
+		<li><%= link_to 'Productos', root_path, data: { scroll: '#products' } %></li>
 		<li><%= link_to 'Novedades', news_path, class: navigation_class('news') %></li>
 		<li><%= link_to 'Contacto', contact_path, class: navigation_class('contact') %></li>
 	</ul>

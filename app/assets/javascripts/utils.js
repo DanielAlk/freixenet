@@ -3,6 +3,7 @@ var Utils = {};
 Utils.init = function() {
 	Utils.toggler();
 	Utils.dropdownFor();
+	Utils.scroller();
 };
 
 Utils.toggler = function() {
@@ -38,4 +39,22 @@ Utils.dropdownFor = function() {
 		$target.val(value);
 	};
 	$('.dropdown[data-for] ul a').click(handler);
+};
+
+Utils.scroller = function() {
+	var $body =	$('html,body');
+	var handler = function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		var id = $this.data('scroll');
+		var $target = $(id);
+		if ($target.length) {
+			var offset = $target.offset().top;
+			$body.stop(true,true).animate({scrollTop: offset});
+		} else {
+			var href = $this.attr('href');
+			window.location.href = href+id;
+		};
+	};
+	$('[data-scroll]').click(handler);
 };

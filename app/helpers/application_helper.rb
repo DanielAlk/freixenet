@@ -4,7 +4,16 @@ module ApplicationHelper
 	end
 
 	def head_title
-		'Freixenet'
+		case params['action']
+		when 'news'
+			'Novedades | Freixenet'
+		when 'media'
+			'Media | Freixenet'
+		when 'contact'
+			'Contacto | Freixenet'
+		else
+			'Freixenet'
+		end
 	end
 
 	def head_description

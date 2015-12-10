@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
-  get 'historia-y-filosofia' => 'static_pages#history', as: :history
-  get 'producto' => 'static_pages#products', as: :products
   get 'novedades' => 'static_pages#news', as: :news
   get 'media' => 'static_pages#media', as: :media
   get 'contacto' => 'static_pages#contact', as: :contact
