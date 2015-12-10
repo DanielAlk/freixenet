@@ -16,5 +16,8 @@
 .rect-xs-130 { width: 130px; height: auto; }
 .rect-xs-170 { width: 170px; height: auto; }
 
+.col-space-10 { margin-left: -10px; margin-right: -10px; }
+.col-space-10>div { padding-left: 10px; padding-right: 10px; }
+
 .center-max-250 { max-width: 250px; margin-right: auto; margin-left: auto; }
 .center-max-290 { max-width: 290px; margin-right: auto; margin-left: auto; }
