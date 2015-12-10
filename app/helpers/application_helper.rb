@@ -16,7 +16,14 @@ module ApplicationHelper
 	end
 
 	def navigation_background
-		'bg-beach-party'
+		case params['action']
+		when 'home'
+			'bg-beach-party'
+		when 'news'
+			'bg-cake-couple'
+		else
+			'bg-beach-party'
+		end
 	end
 
 	def navigation_class(action, match_to = :action)
