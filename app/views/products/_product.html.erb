@@ -1,0 +1,29 @@
+<div class="slider-item <%= 'active' if product_counter == 0 %>">
+	<div class="slider-content" style="background-image: url(<%= asset_path product.image(:large) %>)">
+		<div class="container">
+			<div class="slider-caption">
+				<h2 class="text-uppercase"><%= product.title %></h2>
+				<p class="space-xs-S-40"><%= product.subtitle %></p>
+				<%= link_to 'Más info', nil, class: 'btn btn-info', data: { mode: 'info'} %>
+			</div>
+			<div class="slider-info">
+				<h2 class="text-uppercase"><%= product.title %></h2>
+				<div class="space-xs-S-40">
+					<%= product.text.html_safe %>
+				</div>
+				<p>
+					<%= image_tag 'wine-glass.png', class: 'pull-left icon-wine-glass' %>
+					TECHNICAL INFO: <%= product.technical_info %><br>
+					<br>
+					COUPAGE: <%= product.cutting %><br>
+					CRIANZA: <%= product.age %><br>
+					ALCOHOL: <%= product.alcohol %>
+				</p>
+				<div class="space-xs-N-60">
+					<%= link_to 'Descargar ficha completa', nil, class: 'btn btn-info space-xs-E-20' %>
+					<%= link_to 'Cerrar info', nil, class: 'btn btn-info', data: { mode: 'info'} %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
