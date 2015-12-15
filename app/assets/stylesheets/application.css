@@ -28,5 +28,6 @@
  *= require news
  *= require spaces
  *= require custom
+ *= require admins
  *= require_self
  */

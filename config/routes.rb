@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
+
+  get 'admin' => 'admins#index'
+  get 'admin/list' => 'admins#list'
+  match 'admin' => 'admins#destroy', via: :delete
+  devise_for :admins, controllers: { 
+    registrations: 'admins/registrations', 
+    sessions: 'admins/sessions', 
+    passwords: 'admins/passwords'
+  }
+
   get 'novedades' => 'static_pages#news', as: :news
   get 'media' => 'static_pages#media', as: :media
   get 'contacto' => 'static_pages#contact', as: :contact
