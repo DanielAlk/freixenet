@@ -35,6 +35,13 @@
 				<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy' %>
 			</div>
 		<% end %>
+		<% if @contact.present? && @contact.fullname.present? %>
+			<div>
+				<div>Contacto</div>
+				<%= link_to @contact.fullname, @contact, class: 'show' %>
+				<%= link_to 'Destroy', @contact, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy' %>
+			</div>
+		<% end %>
 	</div>
 	<% content_for :extra_js do %>
 		Admin.init();
