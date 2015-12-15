@@ -4,7 +4,7 @@
 			<div class="slider-caption">
 				<h2 class="text-uppercase"><%= product.title %></h2>
 				<p class="space-xs-S-40"><%= product.subtitle %></p>
-				<%= link_to 'Más info', nil, class: 'btn btn-info', data: { mode: 'info'} %>
+				<%= link_to 'Más info', '#', class: 'btn btn-info', data: { mode: 'info'} %>
 			</div>
 			<div class="slider-info">
 				<h2 class="text-uppercase"><%= product.title %></h2>
@@ -20,8 +20,8 @@
 					ALCOHOL: <%= product.alcohol %>
 				</p>
 				<div class="space-xs-N-60">
-					<%= link_to 'Descargar ficha completa', nil, class: 'btn btn-info space-xs-E-20' %>
-					<%= link_to 'Cerrar info', nil, class: 'btn btn-info', data: { mode: 'info'} %>
+					<%= link_to 'Descargar ficha completa', product.file.url, class: 'btn btn-info space-xs-E-20', download: product.title+'.pdf' if product.file.present? %>
+					<%= link_to 'Cerrar info', '#', class: 'btn btn-info', data: { mode: 'info'} %>
 				</div>
 			</div>
 		</div>
