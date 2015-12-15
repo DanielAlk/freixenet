@@ -26,7 +26,8 @@ Utils.toggler = function() {
 	$('[data-toggle]').click(handler);
 };
 
-Utils.dropdownFor = function() {
+Utils.dropdownFor = function(selector) {
+	selector = selector || '.dropdown[data-for] ul a';
 	var handler = function(e) {
 		e.preventDefault();
 		var $this = $(this);
@@ -38,7 +39,7 @@ Utils.dropdownFor = function() {
 		$dropdown.find('.dropdown-text').text(text);
 		$target.val(value);
 	};
-	$('.dropdown[data-for] ul a').click(handler);
+	$(selector).click(handler);
 };
 
 Utils.scroller = function() {

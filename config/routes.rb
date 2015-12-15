@@ -16,10 +16,11 @@ Rails.application.routes.draw do
   
   resources :articles
   resources :products
+  get 'contacto' => 'contacts#new', as: :new_contact
+  resources :contacts
 
   match 'novedades' => 'static_pages#news', as: :news, via: [:get, :post]
   get 'media' => 'static_pages#media', as: :media
-  get 'contacto' => 'static_pages#contact', as: :contact
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

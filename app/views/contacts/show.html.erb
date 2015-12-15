@@ -1,0 +1,56 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @contact.fullname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>Teléfonos:</strong>
+  <%= @contact.phones %>
+</p>
+
+<p>
+  <strong>Dirección:</strong>
+  <%= @contact.address %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @contact.city %>
+</p>
+
+<p>
+  <strong>Código Postal:</strong>
+  <%= @contact.zip_code %>
+</p>
+
+<p>
+  <strong>País:</strong>
+  <%= @contact.country %>
+</p>
+
+<p>
+  <strong>Fecha de Nacimiento:</strong>
+  <%= @contact.birthday %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @contact.gender %>
+</p>
+
+<p>
+  <strong>Comentarios:</strong>
+  <%= @contact.comments %>
+</p>
+
+<p>
+  <strong>¿Suscripto a lista de Correos?:</strong>
+  <%= @contact.subscribed_to_mailing_list ? 'Si' : 'No' %>
+</p>
+
+<%= link_to 'Back', contacts_path %>

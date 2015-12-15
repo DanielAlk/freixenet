@@ -1,0 +1,68 @@
+<% content_for :extra_js do %>
+  Forms.contact();
+<% end %>
+
+<%= form_for @contact, :html => { class: 'contact-form', id: 'contactForm' } do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.text_field :fullname, class: 'form-control', placeholder: 'Nombre y apellidos *', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.email_field :email, class: 'form-control', placeholder: 'Email *', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.phone_field :phones, class: 'form-control', placeholder: 'Teléfonos' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :address, class: 'form-control', placeholder: 'Dirección' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :city, class: 'form-control', placeholder: 'Ciudad' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :zip_code, class: 'form-control', placeholder: 'Código Postal' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :country, class: 'form-control', placeholder: 'País' %>
+  </div>
+  <div class="form-group hidden" data-date-select="#birthdaySelect">
+    <%= f.date_select :birthday, order: [:day, :month, :year], start_year: 1930 %>
+  </div>
+  <div class="form-group dropdowns-3" id="birthdaySelect"></div>
+  <div class="form-group">
+    <%= f.hidden_field :gender %>
+    <div class="dropdown" data-for="contact_gender">
+      <button class="form-control dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="dropdown-text">Sexo</span> <span class="caret"></span></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a data-value="Masculino" href="#">Masculino</a></li>
+        <li><a data-value="Femenino" href="#">Femenino</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :comments, class: 'form-control', placeholder: 'Comentarios', rows: 4 %>
+  </div>
+  <div class="checkbox">
+    <%= label_tag do %>
+      <%= f.check_box :subscribed_to_mailing_list %>
+      ¿Te gustaría ser a nadido a nuestra lista de correo?
+    <% end %>
+  </div>
+  <div class="checkbox">
+    <%= label_tag do %>
+      <%= check_box_tag 'contact[privacy_policy]', 1, false, required: true %>
+      He leido y aceptado explicitamente la politica de privacidad de Freixenet
+    <% end %>
+  </div>
+  <%= f.submit 'Enviar', class: 'btn btn-default space-xs-N-20' %>
+<% end %>

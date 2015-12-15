@@ -16,17 +16,12 @@
   </div>
 </section>
 <%= render 'layouts/footer' %>
+<%= render 'layouts/notice_modal' %>
 <script>
   $(function() {
     Utils.init();
     <% if content_for? :extra_js %>
       <%= yield :extra_js %>
-    <% end %>
-    <% if notice.present? %>
-      alert('<%= notice %>');
-    <% end %>
-    <% if alert.present? %>
-      alert('<%= alert %>');
     <% end %>
   });
 </script>
