@@ -1,0 +1,13 @@
+<section class="content">
+	<div class="container narrow">
+		<h1 class="text-uppercase text-center"><%= @article.title %></h1>
+		<p class="text-center space-xs-S-40"><%= @article.subtitle %></p>
+		<div class="news">
+			<%= image_tag @article.image(:large), class: 'cover' %>
+			<div class="text-justify space-xs-N-40"><%= @article.text.html_safe %></div>
+		</div>
+		<div class="text-center">
+			<%= link_to 'Ver más novedades', news_path, class: 'btn btn-default' %>
+		</div>
+	</div>
+</section>

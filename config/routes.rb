@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,8 +13,11 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions', 
     passwords: 'admins/passwords'
   }
+  
+  resources :articles
+  resources :products
 
-  get 'novedades' => 'static_pages#news', as: :news
+  match 'novedades' => 'static_pages#news', as: :news, via: [:get, :post]
   get 'media' => 'static_pages#media', as: :media
   get 'contacto' => 'static_pages#contact', as: :contact
 

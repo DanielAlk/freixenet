@@ -1,47 +1,28 @@
+<% content_for :extra_js do %>
+	Articles.init();
+<% end %>
 <section class="content">
 	<div class="container narrow">
 		<h1 class="text-uppercase text-center">Novedades</h1>
 		<p class="text-center space-xs-S-40">Tips, eventos, y lanzamientos. Enterate de todo.</p>
-		<div class="news">
-			<%= image_tag 'news-big-1.jpg', class: 'cover' %>
-			<h2 class="text-uppercase">5 Best places to be in London during a heatwave</h2>
-			<p class="text-justify">
-				La vida es para disfrutarla, ¿no crees? Eso pensamos nosotros, tal vez porque vivimos en un lugar precioso, el Penedès, justo al suroeste de la vibrante Barcelona. Y qué mejor manera para disfrutar que con nuestro cava. No existe mejor augurio que ese sonido del tapón mientras descorchamos una botella. O ese cosquilleo tras el primer sorbo.<br>
-				Cualquier momento es algo más divertido y memorable cuando se celebra con nuestras chispeantes burbujas. Aprovecha tu oportunidad y disfruta de cada momento. La vida es para disfrutarla, ¿no crees? Eso pensamos nosotros, tal vez porque vivimos en un lugar precioso, el Penedès, justo al suroeste de la vibrante Barcelona. Y qué mejor manera para disfrutar que con nuestro cava. No existe mejor augurio que ese sonido del tapón mientras descorchamos una botella. O ese cosquilleo tras el primer sorbo.<br>
-				Cualquier momento es algo más divertido y memorable cuando se celebra con nuestras chispeantes burbujas. Aprovecha tu oportunidad y disfruta de cada momento.<br>
-				<br>
-				La vida es para disfrutarla, ¿no crees? Eso pensamos nosotros, tal vez porque vivimos en un lugar precioso, el Penedès, justo al suroeste de la vibrante Barcelona. Y qué mejor manera para disfrutar que con nuestro cava. No existe mejor augurio que ese sonido del tapón mientras descorchamos una botella. O ese cosquilleo tras el primer sorbo.<br>
-				Cualquier momento es algo más divertido y memorable cuando se celebra con nuestras chispeantes burbujas. Aprovecha tu oportunidad y disfruta de cada momento.La vida es para disfrutarla, ¿no crees? Eso pensamos nosotros, tal vez porque vivimos en un lugar precioso, el Penedès, justo al suroeste de la vibrante Barcelona. Y qué mejor manera para disfrutar que con nuestro cava. No existe mejor augurio que ese sonido del tapón mientras descorchamos una botella.<br>
-				<br>
-				O ese cosquilleo tras el primer sorbo. Cualquier momento es algo más divertido y memorable cuando se celebra con nuestras chispeantes burbujas. Aprovecha tu oportunidad y disfruta de cada momento.
-			</p>
-		</div>
-		<div class="news">
-			<%= image_tag 'news-big-2.jpg', class: 'cover' %>
-			<h2 class="text-uppercase">What does a Dry Wine mean?</h2>
-			<p class="text-justify">
-				A dry wine is simply a wine that has no residual sugar, meaning it isn’t sweet. When grape juice converts to wine, alcohol is produced in the fermentation process because yeast eats the sugar present in the juice. In many wines, the winemaker stops the fermentation process before the yeast has time to eat all the sugar, leaving the wine a touch sweet.<br>
-				When a winemaker leaves a little sugar behind, we call this residual sugar. To make a dry wine, the winemaker will instead let the fermentation process finish completely, allowing the yeast to consume all the sugar present. No more sugar, so no sugary sweetness; the wine is therefore dry!<br>
-				<br>
-				Tip! Do not confuse the absence of sweetness or dryness with the absence of fruit. In a dry wine like our Cordon Negro you will still taste fruit, the wine just won’t taste sweet, like fruit juice.<br>
-				<br>
-				These are the most common types of wines you can find out there depending on their level of sweetness:<br>
-				<br>
-				Ultra Brut / Brut Nature / Extra Brut : The driest sparkling wines — No dosage, No added sugar.<br>
-				Brut/ Dry: would taste dry with no perception of sweetness.  This is the most common style of sparkling wine and is the style our Cordon Negro or Elyssia Pinot Noir have.<br>
-				Semi-Seco: Sweeter, like our Cordon Oro.<br>
-				Sweet:  Sweetest like our Mia Moscato.
-			</p>
-		</div>
-		<div class="news">
-			<%= image_tag 'news-big-3.jpg', class: 'cover' %>
-			<h2 class="text-uppercase">Press Repeat On Our Fall Playlist</h2>
-			<p class="text-justify">
-				With fall just around the corner, summer jams are about to give way to some of the biggest albums of the remaining year. Among the heavy hitters releasing new records this season are The Libertines, Rihanna, Avicii or Leona Lewis. Exciting Autumn! Pour yourself a glass of Freixenet and press repeat on our playlist.
-			</p>
+		<div id="articlesContainer">
+			<% @articles.each do |article| %>
+				<div class="news">
+					<%= image_tag article.image(:large), class: 'cover' %>
+					<h2 class="text-uppercase"><%= article.title %> <%= article.id %></h2>
+					<div class="text-justify"><%= article.text.html_safe %></div>
+				</div>
+			<% end %>
 		</div>
 		<div class="text-center">
-			<%= link_to 'Cargar más novedades', nil, class: 'btn btn-default', disabled: true %>
+			<%= link_to 'Cargar más novedades', news_path(:json), class: 'btn btn-default', id: 'articlesPagination', data: { offset: 3, step: 3, count: @articles_count } %>
 		</div>
 	</div>
 </section>
+<div class="hidden" id="articleTemplate">
+	<div class="news">
+		<%= image_tag nil, class: 'cover' %>
+		<h2 class="text-uppercase"></h2>
+		<div class="text-justify"></div>
+	</div>
+</div>

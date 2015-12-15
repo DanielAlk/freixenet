@@ -3,46 +3,7 @@
 		<h2 class="text-uppercase">Novedades</h2>
 		<p class="space-xs-S-40">Tips, eventos, y lanzamientos. Enterate de todo.</p>
 		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="card">
-					<%= link_to nil do %>
-						<%= image_tag 'news-1.jpg', class: 'cover' %>
-					<% end %>
-					<%= link_to "Join the 'Be Freixenet' spirit", nil, class: 'h3 text-uppercase card-title' %>
-					<p>'Be freixenet’ is our new campaign that embraces a “carpe diem” attitude. Life is too short to be taken too seriously..</p>
-					<%= link_to 'Ver más', nil, class: 'btn btn-default card-button' %>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="card">
-					<%= link_to nil do %>
-						<%= image_tag 'news-2.jpg', class: 'cover' %>
-					<% end %>
-					<%= link_to "Gloria Collell interview for Women's Day", nil, class: 'h3 text-uppercase card-title' %>
-					<p>Discover more about Gloria Collell, the winemaker behind the Mia by Freixenet range.</p>
-					<%= link_to 'Ver más', nil, class: 'btn btn-default card-button' %>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="card">
-					<%= link_to nil do %>
-						<%= image_tag 'news-3.jpg', class: 'cover' %>
-					<% end %>
-					<%= link_to "Summer Tales inspired #playlist", nil, class: 'h3 text-uppercase card-title' %>
-					<p>Backyard barbecues and endless warm nights would not be complete without some summer tunes.</p>
-					<%= link_to 'Ver más', nil, class: 'btn btn-default card-button' %>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="card">
-					<%= link_to nil do %>
-						<%= image_tag 'news-4.jpg', class: 'cover' %>
-					<% end %>
-					<%= link_to '5 Best places to be in London during a heatwave', nil, class: 'h3 text-uppercase card-title' %>
-					<p>Follow our guide to escape the heatwave and make the most of it!</p>
-					<%= link_to 'Ver más', nil, class: 'btn btn-default card-button' %>
-				</div>
-			</div>
+			<%= render @articles %>
 		</div>
 	</div>
 </section>

@@ -40,6 +40,10 @@ module ApplicationHelper
 	end
 
 	def navigation_class(action, match_to = :action)
-		'active' if action == params[match_to]
+		if action.is_a?(Hash)
+			'active' if action[:action] == params[:action] or action[:controller] == params[:controller]
+		else
+			'active' if action == params[match_to]
+		end
 	end
 end

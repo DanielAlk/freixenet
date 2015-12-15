@@ -11,21 +11,31 @@
 		<div>
 			<div>Ver</div>
 			<%= link_to 'Productos', products_path %>
+			<%= link_to 'Novedades', articles_path %>
 		</div>
 		<div>
 			<div>Crear</div>
 			<%= link_to 'Producto', new_product_path %>
+			<%= link_to 'Novedad', new_article_path %>
 		</div>
 		<% if @product.present? && @product.title.present? %>
 			<div>
-				<div>Galería</div>
+				<div>Producto</div>
 				<%= link_to @product.title, @product, class: 'show' %>
 				<%= link_to 'Edit', edit_product_path(@product), class: 'edit' %>
 				<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy' %>
 			</div>
 		<% end %>
+		<% if @article.present? && @article.title.present? %>
+			<div>
+				<div>Novedad</div>
+				<%= link_to @article.title, @article, class: 'show' %>
+				<%= link_to 'Edit', edit_article_path(@article), class: 'edit' %>
+				<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy' %>
+			</div>
+		<% end %>
 	</div>
 	<% content_for :extra_js do %>
-		Utils.adminButtons();
+		Admin.init();
 	<% end %>
 <% end %>
