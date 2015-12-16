@@ -1,6 +1,6 @@
 <% if notice.present? or alert.present? %>
 	<% content_for :extra_js do %>
-		$('#noticeModal').modal('show');
+		Utils.noticeModal();
 	<% end %>
 	
   <div class="modal modal-success fade" tabindex="-1" role="dialog" id="noticeModal">
@@ -12,12 +12,8 @@
         </div>
         <div class="modal-body">
           <p>
-            <% if notice.present? %>
-              <%= notice %>
-            <% end %>
-            <% if alert.present? %>
-              <%= alert %>
-            <% end %>
+            <%= notice if notice.present? %>
+            <%= alert if alert.present? %>
           </p>
         </div>
         <div class="modal-footer">

@@ -1,8 +1,8 @@
-var Slider = {};
-
-Slider.init = function() {
+$(function() {
 	$.fn.slider = Slider.plugin;
-};
+});
+
+var Slider = {};
 
 Slider.plugin = function(delay) {
 	delay = delay || 8000;
