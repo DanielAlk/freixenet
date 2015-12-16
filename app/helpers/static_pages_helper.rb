@@ -4,7 +4,7 @@ module StaticPagesHelper
 		message = feed['message'].gsub(/#(\w+)/, '<a>#\\1</a>') rescue ''
 		message = message.gsub(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?[\w\d&=]*)?/) do |m| 
 			last_link = m
-			"<a href='#{m}'>Ver link</a>"
+			"<a href='#{m}' target='_blank'>Ver link</a>"
 		end
 		age = (Date.today - Date.parse(feed['created_time'])).to_i rescue ''
 		{

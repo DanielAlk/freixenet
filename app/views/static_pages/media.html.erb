@@ -14,7 +14,7 @@
 							</div>
 							<div class="media-box-body">
 								<% if feed[:link] %>
-									<%= link_to feed[:link] do %>
+									<%= link_to feed[:link], target: '_blank' do %>
 										<%= image_tag feed[:image], class: 'cover' %>
 									<% end %>
 								<% else %>
