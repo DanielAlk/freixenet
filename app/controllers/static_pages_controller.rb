@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   	@articles = Article.offset(offset).limit(3).order(created_at: :desc)
   end
   def media
-  end
-  def contact
+    graph = Koala::Facebook::API.new(ENV['OAUTH_ACCESS_TOKEN'], ENV['FACEBOOK_APP_SECRET'])
+    @feed = graph.get_connections("me", "posts?fields=message,created_time,full_picture")
   end
 end
