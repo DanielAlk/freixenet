@@ -6,3 +6,16 @@
 .media-box-footer { padding: 13px 0 5px; }
 .media-box-user { display: inline-block; font-family: inherit; font-weight: 600; color: #234e9a; }
 .media-box-time { display: block; }
+.media-box-body { position: relative; }
+.media-box-play-btn { position: absolute; display: block; left: 50%; margin-left: -40px; top: 50%; margin-top: -28px; opacity: 0.8; }
+.media-box-play-btn:hover { opacity: 1; }
+
+@media(min-width: 768px) {
+	.modal-youtube .modal-dialog { width: auto; margin: 30px 10%; }
+}
+@media(min-width: 992px) {
+	.modal-youtube .modal-dialog { margin: 30px 15%; }
+}
+.modal-youtube .modal-content { position: relative; padding-bottom: 56.25%; height: auto; background-color: #000; }
+.modal-youtube .modal-content iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+.modal-youtube button.close { display: block;width: 35px;height: 35px; background: #000; opacity: 1;line-height: 30px; color: #FFF;z-index: 99999;position: absolute;float: none;right: 0;font-size: 26px;}

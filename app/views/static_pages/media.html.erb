@@ -13,7 +13,12 @@
 								<%= feed[:message] %>
 							</div>
 							<div class="media-box-body">
-								<% if feed[:link] %>
+								<% if feed[:video] %>
+									<%= link_to feed[:video][:url], target: '_blank', class: 'media-box-play-btn', data: { youtube_embed: feed[:video][:embed_url] } do %>
+										<%= image_tag 'btn-youtube-play.png' %>
+									<% end %>
+									<%= image_tag feed[:image], class: 'cover' %>
+								<% elsif feed[:link] %>
 									<%= link_to feed[:link], target: '_blank' do %>
 										<%= image_tag feed[:image], class: 'cover' %>
 									<% end %>
@@ -33,3 +38,4 @@
 		</div>
 	</div>
 </section>
+<%= render 'modals/youtube' %>

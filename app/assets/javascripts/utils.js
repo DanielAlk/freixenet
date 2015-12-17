@@ -59,11 +59,3 @@ Utils.scroller = function() {
 	};
 	$('[data-scroll]').click(handler);
 };
-
-Utils.noticeModal = function() {
-	var $modal = $('#noticeModal');
-	$modal.modal('show')
-	.on('shown.bs.modal', function() {
-		$modal.find('.modal-footer>button').focus();
-	});
-};

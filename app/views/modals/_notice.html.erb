@@ -1,9 +1,9 @@
 <% if notice.present? or alert.present? %>
 	<% content_for :extra_js do %>
-		Utils.noticeModal();
+		Modals.notice();
 	<% end %>
 	
-  <div class="modal modal-success fade" tabindex="-1" role="dialog" id="noticeModal">
+  <div class="modal modal-success fade" tabindex="-1" role="dialog" id="modalNotice">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
