@@ -9,7 +9,7 @@
 			<% @articles.each do |article| %>
 				<div class="news">
 					<%= image_tag article.image(:large), class: 'cover' %>
-					<h2 class="text-uppercase"><%= article.title %> <%= article.id %></h2>
+					<h2 class="text-uppercase"><%= article.title %></h2>
 					<div class="text-justify"><%= article.text.html_safe %></div>
 				</div>
 			<% end %>

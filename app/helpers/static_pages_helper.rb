@@ -17,10 +17,11 @@ module StaticPagesHelper
 			end
 		end
 		age = (Date.today - Date.parse(feed['created_time'])).to_i rescue ''
+		age = age == 0 ? 'Hoy' : 'Hace ' + pluralize(age, 'día', 'días') + '.'
 		{
 			:message => message.html_safe,
 			:image => feed['full_picture'],
-			:age => 'Hace ' + pluralize(age, 'día', 'días') + '.',
+			:age => age,
 			:link => last_link,
 			:video => video.present? ? video : false
 		}
