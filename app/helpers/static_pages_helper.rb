@@ -3,7 +3,7 @@ module StaticPagesHelper
 		video = {}
 		last_link = false
 		message = feed['message'].gsub(/#(\w+)/, '<a>#\\1</a>') rescue ''
-		message = message.gsub(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?[\w\d&=]*)?/) do |url| 
+		message = message.gsub(/(https?:\/\/)([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?(\?[\w\d&=]*)?/) do |url| 
 			if uri = URI.parse(url) and uri.host.include? 'youtube'
 				video_id = URI.decode_www_form(uri.query).assoc('v').last
 				video[:embed_url] = "https://www.youtube.com/embed/#{video_id}?rel=0&autoplay=1"
