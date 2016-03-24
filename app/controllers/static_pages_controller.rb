@@ -31,6 +31,7 @@ class StaticPagesController < ApplicationController
     @raffle = Raffle.new(raffle_params)
     respond_to do |format|
       if @raffle.save
+        AdminNotifier.raffle(@raffle).deliver_now
         format.json { render json: { success: true } }
       else
         format.json { render json: { success: false } }
