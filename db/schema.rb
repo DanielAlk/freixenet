@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215101940) do
+ActiveRecord::Schema.define(version: 20160323233705) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",        null: false
@@ -94,6 +94,15 @@ ActiveRecord::Schema.define(version: 20151215101940) do
     t.string   "file_content_type",  limit: 255
     t.integer  "file_file_size",     limit: 4
     t.datetime "file_updated_at"
+  end
+
+  create_table "raffles", force: :cascade do |t|
+    t.string   "code",       limit: 255
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "location",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

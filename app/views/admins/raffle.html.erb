@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sorteo Freixenet</h3>
+  </div>
+  <div class="panel-body">
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>#</th>
+  				<th>Código</th>
+  				<th>Nombre</th>
+  				<th>Email</th>
+  				<th>Ciudad/Provincia</th>
+  				<th>Fecha</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<% @raffles.each do |raffle| %>
+  				<tr>
+  					<th scope="row"><%= raffle.id %></th>
+  					<td><%= raffle.code %></td>
+  					<td><%= raffle.name %></td>
+  					<td><%= raffle.email %></td>
+  					<td><%= raffle.location %></td>
+  					<td><%= raffle.created_at %></td>
+  				</tr>
+  			<% end %>
+  		</tbody>
+  	</table>
+  </div>
+</div>

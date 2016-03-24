@@ -1,7 +1,9 @@
 class AdminsController < ApplicationController
 	before_action :authenticate_admin!
   before_action :set_admin, only: :destroy
-	layout 'admin'
+  layout 'admin', except: :raffle
+	layout 'admin_big', only: :raffle
+  
   def index
   end
 
@@ -20,6 +22,10 @@ class AdminsController < ApplicationController
   	else
   		redirect_to admin_path, notice: "No tienes permiso para esta acción."
   	end
+  end
+
+  def raffle
+    @raffles = Raffle.all
   end
 
   private

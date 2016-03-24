@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admins#index'
   get 'admin/list' => 'admins#list'
+  get 'admin/sorteo' => 'admins#raffle', as: :admin_raffle
   match 'admin' => 'admins#destroy', via: :delete
   devise_for :admins, controllers: { 
     registrations: 'admins/registrations', 
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
 
   match 'novedades' => 'static_pages#news', as: :news, via: [:get, :post]
   get 'media' => 'static_pages#media', as: :media
+  match 'welcome' => 'static_pages#welcome', as: :welcome, via: [:get, :post]
+  match 'raffle' => 'static_pages#raffle', as: :raffle, via: :post
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
