@@ -35,7 +35,7 @@
 					<input type="number" min="1" max="12" name="birthday[month]" id="birthday_month" placeholder="Mes" class="form-control" required>
 				</div>
 				<div class="col-xs-6">
-					<input type="number" min="1900" max="2015" name="birthday[year]" id="birthday_year" placeholder="Año" class="form-control" required>
+					<input type="number" min="1900" max="<%= (Date.today.year) -1 %>" name="birthday[year]" id="birthday_year" placeholder="Año" class="form-control" required>
 				</div>
 			</div>
 			<button type="submit" class="btn btn-default">INGRESAR</button>
