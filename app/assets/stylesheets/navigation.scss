@@ -12,3 +12,4 @@ header { color: #FFF; text-align: center; padding: 300px 0 30px; }
 .header-bottom { padding-top: 20px; }
 .nav-submenu { display: none; position: absolute; width: 100%; top: 100%; margin-top: 10px; }
 .nav-submenu ul { background-color: #000; width: 510px; margin: 0 auto; text-transform: uppercase; -moz-column-count: 4; -moz-column-gap: 10px; -webkit-column-count: 4; -webkit-column-gap: 10px; column-count: 4; column-gap: 10px; margin-bottom: 0; text-align: left; padding: 12px 35px; }
+.icon-navigation ul>li:nth-child(-n+3) {position: relative;top: -2px;}

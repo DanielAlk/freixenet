@@ -13,6 +13,7 @@
  * require_tree .
  *
  *= require _bootstrap_import
+ *= require _font_awesome_import
  *= require backgrounds
  *= require buttons
  *= require forms
