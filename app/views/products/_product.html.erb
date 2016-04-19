@@ -21,7 +21,8 @@
 				</p>
 				<div class="space-xs-N-60">
 					<%= link_to 'Descargar ficha completa', product.file.url, class: 'btn btn-info space-xs-E-20', download: product.title+'.pdf' if product.file.present? %>
-					<%= link_to 'Cerrar info', '#', class: 'btn btn-info', data: { mode: 'info'} %>
+					<%= link_to 'Cerrar info', '#', class: 'btn btn-info' + (product.purchase_url.present? ? ' space-xs-E-20' : ''), data: { mode: 'info'} %>
+					<%= link_to 'Comprar', product.purchase_url, class: 'btn btn-info', target: '_blank' if product.purchase_url.present? && admin_signed_in? %>
 				</div>
 			</div>
 		</div>
