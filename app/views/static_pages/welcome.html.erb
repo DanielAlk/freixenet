@@ -2,33 +2,33 @@
 	<header><img class="brand" alt="Freixenet" src="<%= asset_path 'freixenet.png' %>"></header>
 	<section class="container">
 		<% if false %>
-		<div class="form-raffle form-hide">
-			<p>Carga el código de tu raspadita y participas del sorteo de una Cava de 18 botellas llena de producto.</p>
-			<%= form_tag raffle_path, method: :post, id: 'form_raffle', data: { hide: '.form-raffle.form-hide', success: '.form-raffle-message.form-success', failure: '.form-raffle-message.form-failure', process: '.form-raffle-message.form-process' } do %>
-				<div class="form-group">
-					<input type="text" name="raffle[code]" id="raffle_code" placeholder="Código" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<input type="text" name="raffle[name]" id="raffle_name" placeholder="Nombre" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<input type="email" name="raffle[email]" id="raffle_email" placeholder="Email" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<input type="text" name="raffle[location]" id="raffle_location" placeholder="Ciudad/Provincia" class="form-control" required>
-				</div>
-				<button type="submit" class="btn btn-sm btn-default">ENVIAR</button>
-			<% end %>
-		</div>
-		<div class="form-raffle-message form-process" style="display:none;">
-			<big>Procesando...</big>
-		</div>
-		<div class="form-raffle-message form-success" style="display:none;">
-			<big>¡Ya estás participando!</big>
-		</div>
-		<div class="form-raffle-message form-failure" style="display:none;">
-			<big>Ocurrió un error, volvé a intentarlo en unos minutos</big>
-		</div>
+			<div class="form-raffle form-hide">
+				<p>Carga el código de tu raspadita y participas del sorteo de una Cava de 18 botellas llena de producto.</p>
+				<%= form_tag raffle_path, method: :post, id: 'form_raffle', data: { hide: '.form-raffle.form-hide', success: '.form-raffle-message.form-success', failure: '.form-raffle-message.form-failure', process: '.form-raffle-message.form-process' } do %>
+					<div class="form-group">
+						<input type="text" name="raffle[code]" id="raffle_code" placeholder="Código" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<input type="text" name="raffle[name]" id="raffle_name" placeholder="Nombre" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<input type="email" name="raffle[email]" id="raffle_email" placeholder="Email" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<input type="text" name="raffle[location]" id="raffle_location" placeholder="Ciudad/Provincia" class="form-control" required>
+					</div>
+					<button type="submit" class="btn btn-sm btn-default">ENVIAR</button>
+				<% end %>
+			</div>
+			<div class="form-raffle-message form-process" style="display:none;">
+				<big>Procesando...</big>
+			</div>
+			<div class="form-raffle-message form-success" style="display:none;">
+				<big>¡Ya estás participando!</big>
+			</div>
+			<div class="form-raffle-message form-failure" style="display:none;">
+				<big>Ocurrió un error, volvé a intentarlo en unos minutos</big>
+			</div>
 		<% end %>
 		<p>Completa tu fecha de nacimiento</p>
 		<%= form_tag welcome_path, method: :post, class: 'form-horizontal', id: 'form_birthday', data: { month: Date.today.month, year: Date.today.year } do %>
