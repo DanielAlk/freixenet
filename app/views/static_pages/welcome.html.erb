@@ -1,6 +1,7 @@
 <div class="content">
 	<header><img class="brand" alt="Freixenet" src="<%= asset_path 'freixenet.png' %>"></header>
 	<section class="container">
+		<% if false %>
 		<div class="form-raffle form-hide">
 			<p>Carga el código de tu raspadita y participas del sorteo de una Cava de 18 botellas llena de producto.</p>
 			<%= form_tag raffle_path, method: :post, id: 'form_raffle', data: { hide: '.form-raffle.form-hide', success: '.form-raffle-message.form-success', failure: '.form-raffle-message.form-failure', process: '.form-raffle-message.form-process' } do %>
@@ -28,6 +29,7 @@
 		<div class="form-raffle-message form-failure" style="display:none;">
 			<big>Ocurrió un error, volvé a intentarlo en unos minutos</big>
 		</div>
+		<% end %>
 		<p>Completa tu fecha de nacimiento</p>
 		<%= form_tag welcome_path, method: :post, class: 'form-horizontal', id: 'form_birthday', data: { month: Date.today.month, year: Date.today.year } do %>
 			<div class="form-group">
