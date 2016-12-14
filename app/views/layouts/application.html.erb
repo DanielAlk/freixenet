@@ -5,6 +5,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= 'admin' if admin_signed_in? %>">
+<%= render 'layouts/ga' if Rails.env.production? %>
 <%= render 'layouts/navigation' %>
 <%= yield %>
 <%= render 'layouts/footer' %>

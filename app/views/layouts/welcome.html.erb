@@ -48,6 +48,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'layouts/ga' if Rails.env.production? %>
 <%= yield %>
 <script>
 $(function(){
